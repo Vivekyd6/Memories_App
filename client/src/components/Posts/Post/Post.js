@@ -12,14 +12,12 @@ import { likePost, deletePost } from '../../../actions/actions';
 const Post = ({post,setCurrId}) => {
   const style = useStyles();
   const dispatch = useDispatch();
+
   return (
-
-
     <Card className={style.card}>
       <CardMedia className={style.media} image={post.selectedFile} title={post.title} />
       <div className={style.overlay}>
         <Typography variant="h6">{post.creator}</Typography>
-
         <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
       </div>
       <div className={style.overlay2}>
@@ -33,7 +31,7 @@ const Post = ({post,setCurrId}) => {
         <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
       </CardContent>
       <CardActions className={style.cardActions}>
-        <Button size="small" color="primary" ><ThumbUpAltIcon fontSize="small" onClick={() => dispatch(likePost(post._id))}/> Like {post.likeCount} </Button>
+        <Button size="small" color="primary" ><ThumbUpAltIcon fontSize="small" onClick={() => dispatch(likePost(post._id))}/> Like  {post.likeCount} </Button>
         <Button size="small" color="primary" ><DeleteIcon fontSize="small"  onClick={() => dispatch(deletePost(post._id))}/> Delete</Button>
       </CardActions>
     </Card>
