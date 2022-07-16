@@ -88,9 +88,6 @@ const Form = ({ currId, setCurrId }) => {
             type="file"
             multiple={false}
             onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })}
-            style={{
-              borderRadius: '5px',
-            }}
 
           />
           <Button className={style.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
