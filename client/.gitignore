@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/src/components/Auth/Auth.js
 # testing
 /coverage
 
@@ -14,6 +14,8 @@
 # misc
 .DS_Store
 .env.local
+.env
+
 .env.development.local
 .env.test.local
 .env.production.local
